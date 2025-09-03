@@ -1,0 +1,10 @@
+/* index.css ou global.css */
+body {
+  margin: 0px;
+  background-color:#192748;
+  margintop:50vh;
+  margin-bottom:100vh
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,167 @@
+:root {
+    --primary-bg: #192748;
+    --container-bg: #0D0F14;
+    --text: #fafafa;
+    --accent: #4f8cff;
+}
+
+body {
+    background-image: url('../../assets/clouds back.png');
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.about-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-title,
+.about-text,
+.tecnologias {
+    width: 95%;
+    margin: 10px auto;
+    background-color: var(--container-bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.about-title {
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(30, 41, 70, 0.7); /* exemplo de cor com transparência */
+backdrop-filter: blur(10px);
+}
+
+.about-title h2 {
+    
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+}
+
+.about-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+    font-size: 2.0rem;
+}
+
+.about-links img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    transition: all 0.5s ease;
+    filter: brightness(0) invert(1); /* deixa os ícones brancos */
+}
+
+.about-links img:hover {
+    filter: brightness(1.5) drop-shadow(0 0 8px var(--accent));
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.about-links img.github {
+    filter: invert(36%) sepia(99%) saturate(7490%) hue-rotate(221deg) brightness(92%) contrast(101%);
+}
+
+.about-text {
+    font-size: 2.0rem;
+    line-height: 1.5;
+    display: flex;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 20px;
+     background-color: rgba(30, 41, 70, 0.7); /* exemplo de cor com transparência */
+backdrop-filter: blur(10px);
+    color: var(--text);
+}
+
+.text-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: textReveal 1s ease-out forwards;
+}
+
+.about-text.text-reveal {
+    animation-delay: 0.5s;
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tecnologias {
+    font-size: 2.0rem;
+    line-height: 1.5;
+    display: flex;
+     background-color: rgba(30, 41, 70, 0.7); /* exemplo de cor com transparência */
+backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.tecnologias ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tecnologias li {
+    list-style: none;
+}
+
+.tecnologia img {
+    width: 100px;
+    height: 60px;
+    vertical-align: middle;
+    transition: all 0.5s ease;
+    padding: 30px;
+}
+
+.tecnologia img:hover {
+    filter: brightness(1.3) drop-shadow(0 0 8px var(--accent));
+    width: 105px;
+    height: 65px;
+}
+
+@media (max-width: 700px) {
+    .about-title,
+    .about-text,
+    .tecnologias {
+        width: 99%;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-links {
+        padding: 10px 0;
+        margin: 10px 0 0 0;
+        gap: 16px;
+    }
+    .tecnologias ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .tecnologia img {
+        width: 70px;
+        height: 40px;
+    }
+}
